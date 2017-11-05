@@ -89,27 +89,76 @@
             </objects>
             <point key="canvasLocation" x="544.79999999999995" y="-245.12743628185908"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="7Tp-Oa-0je">
             <objects>
-                <viewController id="TEk-Za-kHA" sceneMemberID="viewController">
+                <viewController id="TEk-Za-kHA" customClass="MapViewController" customModule="RSRPechhulpApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ojg-IL-Fkn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34j-Ud-hAD">
-                                <rect key="frame" x="150" y="552" width="75" height="30"/>
-                                <state key="normal" title="Bel RSR nu"/>
-                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ND1-do-liN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymx-I6-821">
+                                <rect key="frame" x="79" y="543" width="216" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3b-wZ-cpP">
+                                        <rect key="frame" x="0.0" y="0.0" width="216" height="48"/>
+                                        <state key="normal" backgroundImage="btn_bel_normal"/>
+                                        <state key="selected" backgroundImage="btn_bel_pressed"/>
+                                        <state key="highlighted" backgroundImage="btn_bel_pressed"/>
+                                    </button>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2P-Zt-3FP">
+                                        <rect key="frame" x="46" y="0.0" width="124" height="48"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Bel RSR nu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWi-CP-OA0">
+                                                <rect key="frame" x="40" y="14" width="84" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_call" translatesAutoresizingMaskIntoConstraints="NO" id="suY-os-rEf">
+                                                <rect key="frame" x="0.0" y="6" width="30" height="36"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="suY-os-rEf" firstAttribute="centerY" secondItem="g2P-Zt-3FP" secondAttribute="centerY" id="FIF-VA-b7U"/>
+                                            <constraint firstItem="suY-os-rEf" firstAttribute="leading" secondItem="g2P-Zt-3FP" secondAttribute="leading" id="L39-KJ-dTf"/>
+                                            <constraint firstAttribute="trailing" secondItem="LWi-CP-OA0" secondAttribute="trailing" id="WFn-0H-7kK"/>
+                                            <constraint firstItem="LWi-CP-OA0" firstAttribute="centerY" secondItem="g2P-Zt-3FP" secondAttribute="centerY" id="a6S-2d-rsy"/>
+                                            <constraint firstItem="LWi-CP-OA0" firstAttribute="leading" secondItem="suY-os-rEf" secondAttribute="trailing" constant="10" id="hXZ-OZ-ThE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="r3b-wZ-cpP" firstAttribute="top" secondItem="ymx-I6-821" secondAttribute="top" id="K8z-Cb-NPb"/>
+                                    <constraint firstItem="g2P-Zt-3FP" firstAttribute="centerX" secondItem="ymx-I6-821" secondAttribute="centerX" id="Lgp-fZ-YcV"/>
+                                    <constraint firstAttribute="trailing" secondItem="r3b-wZ-cpP" secondAttribute="trailing" id="N1B-Ez-fTc"/>
+                                    <constraint firstAttribute="bottom" secondItem="r3b-wZ-cpP" secondAttribute="bottom" id="Ton-HA-S9z"/>
+                                    <constraint firstAttribute="bottom" secondItem="g2P-Zt-3FP" secondAttribute="bottom" id="Z8f-zm-ydk"/>
+                                    <constraint firstItem="r3b-wZ-cpP" firstAttribute="leading" secondItem="ymx-I6-821" secondAttribute="leading" id="kPu-UV-VVx"/>
+                                    <constraint firstItem="g2P-Zt-3FP" firstAttribute="top" secondItem="ymx-I6-821" secondAttribute="top" id="maZ-mM-caC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="34j-Ud-hAD" firstAttribute="centerY" secondItem="Ojg-IL-Fkn" secondAttribute="centerY" multiplier="1.7" id="0Ua-wl-kJB"/>
-                            <constraint firstItem="34j-Ud-hAD" firstAttribute="centerX" secondItem="Ojg-IL-Fkn" secondAttribute="centerX" id="1Uh-2K-c2f"/>
+                            <constraint firstItem="ND1-do-liN" firstAttribute="leading" secondItem="Ih3-AH-QCp" secondAttribute="leading" id="1Oc-SL-noC"/>
+                            <constraint firstItem="Ih3-AH-QCp" firstAttribute="trailing" secondItem="ND1-do-liN" secondAttribute="trailing" id="7Mc-7R-RAJ"/>
+                            <constraint firstItem="ymx-I6-821" firstAttribute="centerY" secondItem="Ojg-IL-Fkn" secondAttribute="centerY" multiplier="1.7" id="FcQ-Z7-gMG"/>
+                            <constraint firstItem="Ih3-AH-QCp" firstAttribute="bottom" secondItem="ND1-do-liN" secondAttribute="bottom" id="HE1-iw-k7z"/>
+                            <constraint firstItem="ND1-do-liN" firstAttribute="top" secondItem="Ih3-AH-QCp" secondAttribute="top" id="JFO-RL-e63"/>
+                            <constraint firstItem="ymx-I6-821" firstAttribute="centerX" secondItem="Ojg-IL-Fkn" secondAttribute="centerX" id="Xli-Uv-INr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ih3-AH-QCp"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="ND1-do-liN" id="TPk-f8-XLv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seN-Tt-lkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="i1o-nU-NOf">
@@ -131,7 +180,7 @@
                             </state>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.39429629602744598" green="0.51630070094529745" blue="0.091655449379039078" alpha="0.51490261130136983" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.86673589409999996" green="0.91077721629999997" blue="0.0082663734200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <viewLayoutGuide key="safeArea" id="c5W-Le-SWX"/>
                 </view>
             </objects>
@@ -144,7 +193,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sVW-aM-YCs">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.86673589412630347" green="0.91077721633281805" blue="0.0082663734197882394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.86673589409999996" green="0.91077721629999997" blue="0.0082663734200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.0" green="0.57428932190000004" blue="0.73293060060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
@@ -167,6 +216,7 @@
         <image name="btn_bel_normal" width="216" height="48"/>
         <image name="btn_bel_pressed" width="216" height="48"/>
         <image name="ic_attention" width="42" height="36"/>
+        <image name="ic_call" width="30" height="36"/>
         <image name="img_background" width="320" height="416"/>
     </resources>
 </document>
