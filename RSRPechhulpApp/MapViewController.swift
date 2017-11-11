@@ -89,7 +89,7 @@ class MapViewController : UIViewController, CLLocationManagerDelegate {
         // Drop a pin
         let dropPin = MKPointAnnotation()
         dropPin.coordinate = location.coordinate
-        dropPin.title = "Hey"
+        dropPin.title = "Ik ben hier!"
         mapView.addAnnotation(dropPin)
     }
     
