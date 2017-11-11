@@ -13,6 +13,8 @@ import CoreLocation
 class MapViewController : UIViewController, CLLocationManagerDelegate {
     private final var ANIM_DUR: Double = 0.4
     
+    private final var PHONE_NUM: String = "+31 900 7788 990"
+    
     let manager: CLLocationManager = CLLocationManager()
     var location: CLLocation?
     
@@ -63,17 +65,43 @@ class MapViewController : UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func callButton(_ sender: AnyObject) {
+        let refreshAlert = UIAlertController(title: PHONE_NUM, message: nil, preferredStyle: UIAlertControllerStyle.alert)
         
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        refreshAlert.addAction(UIAlertAction(title: "Call", style: .default, handler: { action in
+            if let url = URL(string: "tel://\(self.PHONE_NUM)"), UIApplication.shared.canOpenURL(url) {
+                if #available(iOS 10, *) {
+                    UIApplication.shared.open(url)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            }
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
     }
     
     func getCurrentLocation() -> CLLocation? {
         return location
     }
     
+    func updateLocation(_ location: CLLocation!) {
+        // Drop a pin
+        let dropPin = MKPointAnnotation()
+        dropPin.coordinate = location.coordinate
+        dropPin.title = "Hey"
+        mapView.addAnnotation(dropPin)
+    }
+    
     // check location availability/ check GPS availability
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
         self.location = manager.location
+        updateLocation(location)
+
+        if let location = manager.location {
+            updateLocation(location)
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
