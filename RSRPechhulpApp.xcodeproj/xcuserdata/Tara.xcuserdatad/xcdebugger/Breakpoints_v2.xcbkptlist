@@ -17,83 +17,6 @@
             endingLineNumber = "4"
             landmarkName = "unknown"
             landmarkType = "0">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RSRPechhulpApp.ViewController.__deallocating_deinit"
-                  moduleName = "RSRPechhulpApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Tara/Desktop/RSRpechhulpRecreation.git/RSRPechhulpApp/ViewController.swift"
-                  timestampString = "531573720.148435"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RSRPechhulpApp.ViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; RSRPechhulpApp.ViewController"
-                  moduleName = "RSRPechhulpApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Tara/Desktop/RSRpechhulpRecreation.git/RSRPechhulpApp/ViewController.swift"
-                  timestampString = "531573720.152195"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RSRPechhulpApp.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; RSRPechhulpApp.ViewController"
-                  moduleName = "RSRPechhulpApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Tara/Desktop/RSRpechhulpRecreation.git/RSRPechhulpApp/ViewController.swift"
-                  timestampString = "531573720.155036"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "283">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RSRPechhulpApp.ViewController.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;RSRPechhulpApp.ViewController&gt;"
-                  moduleName = "RSRPechhulpApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Tara/Desktop/RSRpechhulpRecreation.git/RSRPechhulpApp/ViewController.swift"
-                  timestampString = "531573720.158256"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RSRPechhulpApp.ViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;RSRPechhulpApp.ViewController&gt;"
-                  moduleName = "RSRPechhulpApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Tara/Desktop/RSRpechhulpRecreation.git/RSRPechhulpApp/ViewController.swift"
-                  timestampString = "531573720.161101"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "116">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -114,6 +37,22 @@
                   offsetFromSymbolStart = "1">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSRPechhulpApp/MapViewController.swift"
+            timestampString = "532101088.844525"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "dismissCallPopup(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
