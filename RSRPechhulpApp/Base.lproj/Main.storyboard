@@ -14,7 +14,7 @@
         <!--Over RSR-->
         <scene sceneID="euG-eU-i4p">
             <objects>
-                <viewController title="Over RSR" id="En5-TO-d9B" sceneMemberID="viewController">
+                <viewController title="Over RSR" automaticallyAdjustsScrollViewInsets="NO" id="En5-TO-d9B" customClass="InfoViewController" customModule="RSRPechhulpApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cY8-gY-iKV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,10 +28,10 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="over_image" translatesAutoresizingMaskIntoConstraints="NO" id="opy-EW-Ces">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="535-hi-fS9">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="535-hi-fS9">
                                                 <rect key="frame" x="10" y="226" width="355" height="367"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <mutableString key="text">Met de hulp van RSR blijft u mobiel. RSR is dé leverancier van hulpmiddelen in de regio Noordoost-Nederland. Gedegen kennis en jarenlagne ervaring zit in ons DNA verweven en leidt tot het beste advies.  Wilt u meer weten over onze producten en diensten, kijk dan op www.rsr.nl of bezoek onze showrooms in Silvolde en Nieuwleusen. We zijn iedere werkdag geopend van 8.00 tot 17.00 uur. Hier kunt u diverse hulpmiddelen uitproberen en rusig bekijken wat goed bij uw situatie aansluit. Samen met u zoeken we naar hulpmidddelen dat bij u past. RSR maakt mensen mobiel.</mutableString>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <string key="text">Met de hulp van RSR blijft u mobiel. RSR is dé leverancier van hulpmiddelen in de regio Noordoost-Nederland. Gedegen kennis en jarenlagne ervaring zit in ons DNA verweven en leidt tot het beste advies.  Wilt u meer weten over onze producten en diensten, kijk dan op www.rsr.nl of bezoek onze showrooms in Silvolde en Nieuwleusen. We zijn iedere werkdag geopend van 8.00 tot 17.00 uur. Hier kunt u diverse hulpmiddelen uitproberen en rusig bekijken wat goed bij uw situatie aansluit. Samen met u zoeken we naar hulpmidddelen dat bij u past. RSR maakt mensen mobiel.</string>
                                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -79,6 +79,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EXa-Fy-G6u"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="eJR-pG-V2N" id="FU9-pf-ShC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km0-sC-pzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

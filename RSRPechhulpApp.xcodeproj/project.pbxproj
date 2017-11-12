@@ -13,6 +13,7 @@
 		570D3A621FACE564007624D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570D3A611FACE564007624D9 /* Assets.xcassets */; };
 		570D3A651FACE564007624D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570D3A631FACE564007624D9 /* LaunchScreen.storyboard */; };
 		570D3A701FACE565007624D9 /* RSRPechhulpAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570D3A6F1FACE565007624D9 /* RSRPechhulpAppTests.swift */; };
+		5760A92B1FB8CFC300C7288F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A92A1FB8CFC300C7288F /* InfoViewController.swift */; };
 		57709E891FAF3B110006D968 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57709E881FAF3B110006D968 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		570D3A6B1FACE565007624D9 /* RSRPechhulpAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSRPechhulpAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		570D3A6F1FACE565007624D9 /* RSRPechhulpAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSRPechhulpAppTests.swift; sourceTree = "<group>"; };
 		570D3A711FACE565007624D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5760A92A1FB8CFC300C7288F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		57709E881FAF3B110006D968 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 				570D3A611FACE564007624D9 /* Assets.xcassets */,
 				570D3A631FACE564007624D9 /* LaunchScreen.storyboard */,
 				570D3A661FACE564007624D9 /* Info.plist */,
+				5760A92A1FB8CFC300C7288F /* InfoViewController.swift */,
 			);
 			path = RSRPechhulpApp;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			files = (
 				570D3A5D1FACE564007624D9 /* StartViewController.swift in Sources */,
 				57709E891FAF3B110006D968 /* MapViewController.swift in Sources */,
+				5760A92B1FB8CFC300C7288F /* InfoViewController.swift in Sources */,
 				570D3A5B1FACE564007624D9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QPB6523ZKB;
 				INFOPLIST_FILE = RSRPechhulpApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tara.elsen.RSRPechhulpApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -375,6 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QPB6523ZKB;
 				INFOPLIST_FILE = RSRPechhulpApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tara.elsen.RSRPechhulpApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
