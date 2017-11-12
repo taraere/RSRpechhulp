@@ -10,13 +10,15 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController : UIViewController, CLLocationManagerDelegate {
+class MapViewController : UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     private final var ANIM_DUR: Double = 0.4
     
     private final var PHONE_NUM: String = "+31 900 7788 990"
     
+    let dropPin = MKPointAnnotation()
     let manager: CLLocationManager = CLLocationManager()
     var location: CLLocation?
+    var didZoom: Bool = false
     
     @IBOutlet weak var popUpView: UIView!
     
@@ -36,6 +38,8 @@ class MapViewController : UIViewController, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.delegate = self
         manager.startUpdatingLocation()
+        
+        mapView.delegate = self
     }
     
     @IBAction func dismissCallPopup(_ sender: AnyObject) {
@@ -80,22 +84,31 @@ class MapViewController : UIViewController, CLLocationManagerDelegate {
     }
     
     func updateLocation(_ location: CLLocation!) {
-        // Drop a pin
-        let dropPin = MKPointAnnotation()
         dropPin.coordinate = location.coordinate
-        dropPin.title = "Ik ben hier!"
         mapView.addAnnotation(dropPin)
+        
+        // Zoom
+        if !didZoom {
+            let span = MKCoordinateSpanMake(0.05, 0.05)
+            let region = MKCoordinateRegionMake(location.coordinate, span)
+            mapView.setRegion(region, animated: true)
+            didZoom = true
+        }
     }
     
-    // check location availability/ check GPS availability
-    
-    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
-        self.location = manager.location
-        updateLocation(location)
-
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = manager.location {
             updateLocation(location)
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotation")
+        if annotationView == nil {
+            annotationView = Annotation(annotation: annotation, reuseIdentifier: "annotation")
+        }
+        return annotationView;
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

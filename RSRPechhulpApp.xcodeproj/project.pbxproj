@@ -14,6 +14,8 @@
 		570D3A651FACE564007624D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570D3A631FACE564007624D9 /* LaunchScreen.storyboard */; };
 		570D3A701FACE565007624D9 /* RSRPechhulpAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570D3A6F1FACE565007624D9 /* RSRPechhulpAppTests.swift */; };
 		5760A92B1FB8CFC300C7288F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A92A1FB8CFC300C7288F /* InfoViewController.swift */; };
+		5760A92D1FB8E2B000C7288F /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A92C1FB8E2B000C7288F /* Annotation.swift */; };
+		5760A92F1FB8ED3000C7288F /* AnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5760A92E1FB8ED3000C7288F /* AnnotationView.xib */; };
 		57709E891FAF3B110006D968 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57709E881FAF3B110006D968 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		570D3A6F1FACE565007624D9 /* RSRPechhulpAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSRPechhulpAppTests.swift; sourceTree = "<group>"; };
 		570D3A711FACE565007624D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5760A92A1FB8CFC300C7288F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		5760A92C1FB8E2B000C7288F /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		5760A92E1FB8ED3000C7288F /* AnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnotationView.xib; sourceTree = "<group>"; };
 		57709E881FAF3B110006D968 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +93,8 @@
 				570D3A631FACE564007624D9 /* LaunchScreen.storyboard */,
 				570D3A661FACE564007624D9 /* Info.plist */,
 				5760A92A1FB8CFC300C7288F /* InfoViewController.swift */,
+				5760A92C1FB8E2B000C7288F /* Annotation.swift */,
+				5760A92E1FB8ED3000C7288F /* AnnotationView.xib */,
 			);
 			path = RSRPechhulpApp;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				570D3A651FACE564007624D9 /* LaunchScreen.storyboard in Resources */,
+				5760A92F1FB8ED3000C7288F /* AnnotationView.xib in Resources */,
 				570D3A621FACE564007624D9 /* Assets.xcassets in Resources */,
 				570D3A601FACE564007624D9 /* Main.storyboard in Resources */,
 			);
@@ -206,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				570D3A5D1FACE564007624D9 /* StartViewController.swift in Sources */,
+				5760A92D1FB8E2B000C7288F /* Annotation.swift in Sources */,
 				57709E891FAF3B110006D968 /* MapViewController.swift in Sources */,
 				5760A92B1FB8CFC300C7288F /* InfoViewController.swift in Sources */,
 				570D3A5B1FACE564007624D9 /* AppDelegate.swift in Sources */,
