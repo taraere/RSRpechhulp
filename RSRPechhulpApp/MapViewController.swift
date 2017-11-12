@@ -65,20 +65,14 @@ class MapViewController : UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func callButton(_ sender: AnyObject) {
-        let refreshAlert = UIAlertController(title: PHONE_NUM, message: nil, preferredStyle: UIAlertControllerStyle.alert)
-        
-        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
-        refreshAlert.addAction(UIAlertAction(title: "Call", style: .default, handler: { action in
-            if let url = URL(string: "tel://\(self.PHONE_NUM)"), UIApplication.shared.canOpenURL(url) {
-                if #available(iOS 10, *) {
-                    UIApplication.shared.open(url)
-                } else {
-                    UIApplication.shared.openURL(url)
-                }
+        let s = "tel:\(self.PHONE_NUM)".replacingOccurrences(of: " ", with: "")
+        if let url = URL(string: s), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
             }
-        }))
-        
-        present(refreshAlert, animated: true, completion: nil)
+        }
     }
     
     func getCurrentLocation() -> CLLocation? {
