@@ -23,28 +23,28 @@
                         <constraint firstAttribute="height" constant="172" id="zJH-Dd-Esq"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Uw locatie:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VET-0Q-4md">
-                    <rect key="frame" x="59.5" y="20" width="85" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Uw locatie:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VET-0Q-4md">
+                    <rect key="frame" x="54" y="20" width="96.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVm-oU-7jK">
-                    <rect key="frame" x="35.5" y="56" width="134" height="36"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVm-oU-7jK">
+                    <rect key="frame" x="10" y="56" width="184" height="36"/>
                     <string key="text">Andersensingel 106,
 1102 VR, Amsterdam</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6E-6t-pJh">
-                    <rect key="frame" x="38.5" y="107" width="127.5" height="30"/>
+                    <rect key="frame" x="33" y="107" width="139" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="VJm-DH-Tdt"/>
                     </constraints>
                     <string key="text">Onthoud deze locatie voor
 het telefoongesprek</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -58,7 +58,9 @@ het telefoongesprek</string>
                 <constraint firstItem="L6E-6t-pJh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Vg5-tW-HsL"/>
                 <constraint firstItem="JcA-j6-5TI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hZn-kq-yFK"/>
                 <constraint firstItem="L6E-6t-pJh" firstAttribute="top" secondItem="zVm-oU-7jK" secondAttribute="bottom" constant="15" id="iqg-AU-3kP"/>
+                <constraint firstItem="zVm-oU-7jK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="lX1-3d-85e"/>
                 <constraint firstItem="VET-0Q-4md" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="qxi-rl-xre"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zVm-oU-7jK" secondAttribute="trailing" constant="10" id="sol-Pq-im4"/>
                 <constraint firstAttribute="height" secondItem="JcA-j6-5TI" secondAttribute="height" id="tzA-Vv-lmD"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="L6E-6t-pJh" secondAttribute="bottom" constant="35" id="xsg-8z-Ght"/>
                 <constraint firstAttribute="width" secondItem="JcA-j6-5TI" secondAttribute="width" id="z09-II-Vpl"/>

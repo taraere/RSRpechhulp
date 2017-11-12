@@ -79,11 +79,8 @@ class MapViewController : UIViewController, CLLocationManagerDelegate, MKMapView
         }
     }
     
-    func getCurrentLocation() -> CLLocation? {
-        return location
-    }
-    
     func updateLocation(_ location: CLLocation!) {
+        self.location = location
         dropPin.coordinate = location.coordinate
         mapView.addAnnotation(dropPin)
         
@@ -104,10 +101,38 @@ class MapViewController : UIViewController, CLLocationManagerDelegate, MKMapView
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotation")
+        var annotationView: Annotation? = mapView.dequeueReusableAnnotationView(withIdentifier: "annotation") as? Annotation
         if annotationView == nil {
             annotationView = Annotation(annotation: annotation, reuseIdentifier: "annotation")
         }
+        
+        // Add below code to get address for touch coordinates.
+        if let location = self.location {
+            let geoCoder = CLGeocoder()
+            
+            geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+                
+                if let placeMark = placemarks?[0] {
+                    var address = ""
+                    // Location name
+                    if let locationName = placeMark.addressDictionary!["Name"] as? NSString {
+                        address = address.appending(locationName as String).appending(", ").appending("\n")
+                    }
+                    // Zip code
+                    if let zip = placeMark.addressDictionary!["ZIP"] as? NSString {
+                        address = address.appending(zip as String).appending(", ")
+                    }
+                    // City
+                    if let city = placeMark.addressDictionary!["City"] as? NSString {
+                        address = address.appending(city as String)
+                    }
+                    print(address)
+                    
+                    annotationView?.setAddress(address: address)
+                }
+            })
+        }
+        
         return annotationView;
     }
     

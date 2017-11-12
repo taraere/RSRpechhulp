@@ -11,18 +11,23 @@ import MapKit
 
 class Annotation: MKPinAnnotationView {
     
+    let annotationView: AnnotationView = AnnotationView.loadFromNibNamed(nibNamed: "AnnotationView")! as! AnnotationView
+    
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
-        let view = AnnotationView.loadFromNibNamed(nibNamed: "AnnotationView")!
-        view.frame.origin.x = -(view.frame.size.width * 0.5) + 5
-        view.frame.origin.y = -view.frame.size.height
+        annotationView.frame.origin.x = -(annotationView.frame.size.width * 0.5) + 5
+        annotationView.frame.origin.y = -annotationView.frame.size.height
         
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         
-        self.addSubview(view)
+        self.addSubview(annotationView)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func setAddress(address: String) {
+        annotationView.setAddress(address: address)
     }
 }
 
