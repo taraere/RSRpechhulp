@@ -27,6 +27,9 @@ class Annotation: MKPinAnnotationView {
     }
     
     func setAddress(address: String) {
+        /*
+         *
+         */
         annotationView.setAddress(address: address)
     }
 }

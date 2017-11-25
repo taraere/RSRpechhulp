@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eg9-OD-P4S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eg9-OD-P4S">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,12 +28,19 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="over_image" translatesAutoresizingMaskIntoConstraints="NO" id="opy-EW-Ces">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="535-hi-fS9">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="535-hi-fS9">
                                                 <rect key="frame" x="10" y="226" width="355" height="367"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <string key="text">Met de hulp van RSR blijft u mobiel. RSR is dé leverancier van hulpmiddelen in de regio Noordoost-Nederland. Gedegen kennis en jarenlagne ervaring zit in ons DNA verweven en leidt tot het beste advies.  Wilt u meer weten over onze producten en diensten, kijk dan op www.rsr.nl of bezoek onze showrooms in Silvolde en Nieuwleusen. We zijn iedere werkdag geopend van 8.00 tot 17.00 uur. Hier kunt u diverse hulpmiddelen uitproberen en rusig bekijken wat goed bij uw situatie aansluit. Samen met u zoeken we naar hulpmidddelen dat bij u past. RSR maakt mensen mobiel.</string>
-                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <mutableString key="content">Met de hulp van RSR blijft u mobiel. RSR is dé leverancier van hulpmiddelen in de regio Noordoost-Nederland. Gedegen kennis en jarenlagne ervaring zit in ons DNA verweven en leidt tot het beste advies.  Wilt u meer weten over onze producten en diensten, kijk dan op www.rsr.nl of bezoek onze showrooms in Silvolde en Nieuwleusen. We zijn iedere werkdag geopend van 8.00 tot 17.00 uur. Hier kunt u diverse hulpmiddelen uitproberen en rusig bekijken wat goed bij uw situatie aansluit. Samen met u zoeken we naar hulpmidddelen dat bij u past. RSR maakt mensen mobiel.</mutableString>
+                                                        <attributes>
+                                                            <color key="NSColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                            <font key="NSFont" size="18" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                             </textView>
@@ -98,50 +105,64 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="Etx-hR-6dF">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Grn-Cp-AKI">
-                                <rect key="frame" x="80" y="543" width="216" height="48"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-Ni-ZcY">
+                                <rect key="frame" x="37.5" y="542" width="300" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zO-nR-Xcg">
-                                        <rect key="frame" x="0.0" y="0.0" width="216" height="48"/>
-                                        <state key="normal" backgroundImage="btn_bel_normal"/>
-                                        <state key="selected" backgroundImage="btn_bel_pressed"/>
-                                        <state key="highlighted" backgroundImage="btn_bel_pressed"/>
-                                        <connections>
-                                            <segue destination="TEk-Za-kHA" kind="show" id="7kR-7d-hZE"/>
-                                        </connections>
-                                    </button>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybm-0c-686">
-                                        <rect key="frame" x="28" y="0.0" width="160" height="48"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Grn-Cp-AKI" userLabel="ButtonView">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="RSR Pechhulp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T91-DD-OyS">
-                                                <rect key="frame" x="52" y="14" width="108" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_attention" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-FO-b4u">
-                                                <rect key="frame" x="0.0" y="6" width="42" height="36"/>
-                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zO-nR-Xcg">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                <state key="normal" backgroundImage="btn_bel_normal"/>
+                                                <state key="selected" backgroundImage="btn_bel_pressed"/>
+                                                <state key="highlighted" backgroundImage="btn_bel_pressed"/>
+                                                <connections>
+                                                    <segue destination="TEk-Za-kHA" kind="show" id="7kR-7d-hZE"/>
+                                                </connections>
+                                            </button>
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybm-0c-686">
+                                                <rect key="frame" x="62.5" y="0.0" width="175" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="RSR Pechhulp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T91-DD-OyS">
+                                                        <rect key="frame" x="52" y="13.5" width="123" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_attention" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-FO-b4u">
+                                                        <rect key="frame" x="0.0" y="7" width="42" height="36"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="T91-DD-OyS" secondAttribute="trailing" id="NBg-Iu-VJA"/>
+                                                    <constraint firstItem="T91-DD-OyS" firstAttribute="centerY" secondItem="ybm-0c-686" secondAttribute="centerY" id="Tf8-cd-kUE"/>
+                                                    <constraint firstItem="Ubq-FO-b4u" firstAttribute="centerY" secondItem="ybm-0c-686" secondAttribute="centerY" id="hsH-M5-ZvA"/>
+                                                    <constraint firstItem="T91-DD-OyS" firstAttribute="leading" secondItem="Ubq-FO-b4u" secondAttribute="trailing" constant="10" id="iBP-cq-fal"/>
+                                                    <constraint firstItem="Ubq-FO-b4u" firstAttribute="leading" secondItem="ybm-0c-686" secondAttribute="leading" id="wFw-KO-5d1"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="T91-DD-OyS" secondAttribute="trailing" id="NBg-Iu-VJA"/>
-                                            <constraint firstItem="T91-DD-OyS" firstAttribute="centerY" secondItem="ybm-0c-686" secondAttribute="centerY" id="Tf8-cd-kUE"/>
-                                            <constraint firstItem="Ubq-FO-b4u" firstAttribute="centerY" secondItem="ybm-0c-686" secondAttribute="centerY" id="hsH-M5-ZvA"/>
-                                            <constraint firstItem="T91-DD-OyS" firstAttribute="leading" secondItem="Ubq-FO-b4u" secondAttribute="trailing" constant="10" id="iBP-cq-fal"/>
-                                            <constraint firstItem="Ubq-FO-b4u" firstAttribute="leading" secondItem="ybm-0c-686" secondAttribute="leading" id="wFw-KO-5d1"/>
+                                            <constraint firstAttribute="height" constant="50" id="4Md-6P-0VT"/>
+                                            <constraint firstAttribute="bottom" secondItem="5zO-nR-Xcg" secondAttribute="bottom" id="6QU-bL-BNs"/>
+                                            <constraint firstAttribute="trailing" secondItem="5zO-nR-Xcg" secondAttribute="trailing" id="HIq-4F-qkQ"/>
+                                            <constraint firstItem="5zO-nR-Xcg" firstAttribute="leading" secondItem="Grn-Cp-AKI" secondAttribute="leading" id="Law-YX-euY"/>
+                                            <constraint firstItem="ybm-0c-686" firstAttribute="centerX" secondItem="Grn-Cp-AKI" secondAttribute="centerX" id="N5n-40-pp4"/>
+                                            <constraint firstItem="5zO-nR-Xcg" firstAttribute="top" secondItem="Grn-Cp-AKI" secondAttribute="top" id="PnJ-n7-tTy"/>
+                                            <constraint firstAttribute="bottom" secondItem="ybm-0c-686" secondAttribute="bottom" id="TUr-HB-yMD"/>
+                                            <constraint firstAttribute="width" constant="300" id="pfl-D8-Fcm"/>
+                                            <constraint firstItem="ybm-0c-686" firstAttribute="top" secondItem="Grn-Cp-AKI" secondAttribute="top" id="vla-Zd-VlH"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="5zO-nR-Xcg" secondAttribute="bottom" id="6QU-bL-BNs"/>
-                                    <constraint firstAttribute="trailing" secondItem="5zO-nR-Xcg" secondAttribute="trailing" id="HIq-4F-qkQ"/>
-                                    <constraint firstItem="5zO-nR-Xcg" firstAttribute="leading" secondItem="Grn-Cp-AKI" secondAttribute="leading" id="Law-YX-euY"/>
-                                    <constraint firstItem="ybm-0c-686" firstAttribute="centerX" secondItem="Grn-Cp-AKI" secondAttribute="centerX" id="N5n-40-pp4"/>
-                                    <constraint firstItem="5zO-nR-Xcg" firstAttribute="top" secondItem="Grn-Cp-AKI" secondAttribute="top" id="PnJ-n7-tTy"/>
-                                    <constraint firstAttribute="bottom" secondItem="ybm-0c-686" secondAttribute="bottom" id="TUr-HB-yMD"/>
-                                    <constraint firstItem="ybm-0c-686" firstAttribute="top" secondItem="Grn-Cp-AKI" secondAttribute="top" id="vla-Zd-VlH"/>
+                                    <constraint firstItem="Grn-Cp-AKI" firstAttribute="top" secondItem="v1b-Ni-ZcY" secondAttribute="top" id="DpG-k7-5kW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Grn-Cp-AKI" secondAttribute="trailing" id="V61-FP-Adt"/>
+                                    <constraint firstItem="Grn-Cp-AKI" firstAttribute="leading" secondItem="v1b-Ni-ZcY" secondAttribute="leading" id="Wa2-63-Kgq"/>
+                                    <constraint firstAttribute="bottom" secondItem="Grn-Cp-AKI" secondAttribute="bottom" id="rfe-Gr-4iU"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -149,11 +170,11 @@
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Etx-hR-6dF" secondAttribute="bottom" id="Epm-cy-Lbi"/>
+                            <constraint firstItem="v1b-Ni-ZcY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q59-f0-3jk"/>
                             <constraint firstItem="Etx-hR-6dF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UDd-x5-wg3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Etx-hR-6dF" secondAttribute="trailing" id="kCY-T8-BwL"/>
-                            <constraint firstItem="Grn-Cp-AKI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oMc-lZ-T82"/>
+                            <constraint firstItem="v1b-Ni-ZcY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.7" id="rUc-rd-gO0"/>
                             <constraint firstItem="Etx-hR-6dF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="u9s-Bf-XJo"/>
-                            <constraint firstItem="Grn-Cp-AKI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.7" id="w8Y-OG-m9x"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -229,11 +250,11 @@
                                                 </connections>
                                             </button>
                                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yP6-xW-dHs">
-                                                <rect key="frame" x="64.5" y="0.0" width="87.5" height="48"/>
+                                                <rect key="frame" x="58.5" y="0.0" width="99" height="48"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Bel nu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fj-1i-sDG">
-                                                        <rect key="frame" x="40" y="14" width="47.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="45" y="12" width="54" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -247,7 +268,7 @@
                                                     <constraint firstItem="RLD-rh-U8Z" firstAttribute="centerY" secondItem="yP6-xW-dHs" secondAttribute="centerY" id="M0e-DO-GhO"/>
                                                     <constraint firstAttribute="trailing" secondItem="8Fj-1i-sDG" secondAttribute="trailing" id="gCv-Bg-rS1"/>
                                                     <constraint firstItem="8Fj-1i-sDG" firstAttribute="centerY" secondItem="yP6-xW-dHs" secondAttribute="centerY" id="xaq-q5-qTa"/>
-                                                    <constraint firstItem="8Fj-1i-sDG" firstAttribute="leading" secondItem="RLD-rh-U8Z" secondAttribute="trailing" constant="10" id="zg4-RI-UsM"/>
+                                                    <constraint firstItem="8Fj-1i-sDG" firstAttribute="leading" secondItem="RLD-rh-U8Z" secondAttribute="trailing" constant="15" id="zg4-RI-UsM"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -284,10 +305,14 @@
                                 <viewLayoutGuide key="safeArea" id="c5W-Le-SWX"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymx-I6-821">
-                                <rect key="frame" x="79" y="543" width="216" height="48"/>
+                                <rect key="frame" x="37" y="542" width="300" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3b-wZ-cpP">
-                                        <rect key="frame" x="0.0" y="0.0" width="216" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0Q1-cJ-Sbq"/>
+                                            <constraint firstAttribute="width" constant="300" id="I6B-yJ-HDf"/>
+                                        </constraints>
                                         <state key="normal" backgroundImage="btn_bel_normal"/>
                                         <state key="selected" backgroundImage="btn_bel_pressed"/>
                                         <state key="highlighted" backgroundImage="btn_bel_pressed"/>
@@ -296,16 +321,16 @@
                                         </connections>
                                     </button>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2P-Zt-3FP">
-                                        <rect key="frame" x="45" y="0.0" width="126" height="48"/>
+                                        <rect key="frame" x="82" y="0.0" width="137.5" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Bel RSR nu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWi-CP-OA0">
-                                                <rect key="frame" x="42" y="14" width="84" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="42" y="13" width="95.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_phone" translatesAutoresizingMaskIntoConstraints="NO" id="suY-os-rEf">
-                                                <rect key="frame" x="0.0" y="6" width="32" height="36"/>
+                                                <rect key="frame" x="0.0" y="7" width="32" height="36"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
