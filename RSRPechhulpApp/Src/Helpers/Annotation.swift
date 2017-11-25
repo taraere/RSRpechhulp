@@ -13,7 +13,7 @@ class Annotation: MKPinAnnotationView {
     
     let annotationView: AnnotationView = AnnotationView.loadFromNibNamed(nibNamed: "AnnotationView")! as! AnnotationView
     
-    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
+    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {    
         annotationView.frame.origin.x = -(annotationView.frame.size.width * 0.5) + 5
         annotationView.frame.origin.y = -annotationView.frame.size.height
         

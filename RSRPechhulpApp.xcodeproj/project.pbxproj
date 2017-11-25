@@ -85,16 +85,10 @@
 		570D3A591FACE564007624D9 /* RSRPechhulpApp */ = {
 			isa = PBXGroup;
 			children = (
-				570D3A5A1FACE564007624D9 /* AppDelegate.swift */,
-				570D3A5C1FACE564007624D9 /* StartViewController.swift */,
-				57709E881FAF3B110006D968 /* MapViewController.swift */,
-				570D3A5E1FACE564007624D9 /* Main.storyboard */,
-				570D3A611FACE564007624D9 /* Assets.xcassets */,
-				570D3A631FACE564007624D9 /* LaunchScreen.storyboard */,
-				570D3A661FACE564007624D9 /* Info.plist */,
-				5760A92A1FB8CFC300C7288F /* InfoViewController.swift */,
-				5760A92C1FB8E2B000C7288F /* Annotation.swift */,
-				5760A92E1FB8ED3000C7288F /* AnnotationView.xib */,
+				57125A471FC9772D00BE8224 /* Resources */,
+				57125A491FC977AF00BE8224 /* SupportingFiles */,
+				57125A481FC9775B00BE8224 /* Views */,
+				57125A431FC976AA00BE8224 /* Src */,
 			);
 			path = RSRPechhulpApp;
 			sourceTree = "<group>";
@@ -106,6 +100,60 @@
 				570D3A711FACE565007624D9 /* Info.plist */,
 			);
 			path = RSRPechhulpAppTests;
+			sourceTree = "<group>";
+		};
+		57125A431FC976AA00BE8224 /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				570D3A5A1FACE564007624D9 /* AppDelegate.swift */,
+				57125A461FC9771600BE8224 /* ViewControllers */,
+				57125A4A1FC977E000BE8224 /* Helpers */,
+			);
+			path = Src;
+			sourceTree = "<group>";
+		};
+		57125A461FC9771600BE8224 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5760A92A1FB8CFC300C7288F /* InfoViewController.swift */,
+				570D3A5C1FACE564007624D9 /* StartViewController.swift */,
+				57709E881FAF3B110006D968 /* MapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		57125A471FC9772D00BE8224 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				570D3A611FACE564007624D9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		57125A481FC9775B00BE8224 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				570D3A631FACE564007624D9 /* LaunchScreen.storyboard */,
+				570D3A5E1FACE564007624D9 /* Main.storyboard */,
+				5760A92E1FB8ED3000C7288F /* AnnotationView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		57125A491FC977AF00BE8224 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				570D3A661FACE564007624D9 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		57125A4A1FC977E000BE8224 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5760A92C1FB8E2B000C7288F /* Annotation.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
