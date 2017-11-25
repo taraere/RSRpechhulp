@@ -9,12 +9,10 @@
 import UIKit
 
 class InfoViewController : UIViewController {
-    
-    @IBOutlet weak var scrollView: UIScrollView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
-        scrollView.frame.size.height = scrollView.contentSize.height
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // TODO: add extra (hidden) image and show it on iPad
     }
 }

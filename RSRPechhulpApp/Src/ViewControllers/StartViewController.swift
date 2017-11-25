@@ -1,4 +1,4 @@
- //
+//
 //  ViewController.swift
 //  RSRPechhulpApp
 //
@@ -10,14 +10,20 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    @IBOutlet weak var infoButton: UIView!
+    @IBOutlet weak var barButtonItem: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         // TODO: iPad specific stuff
         if UIDevice.current.userInterfaceIdiom == .pad {
-            
+            barButtonItem.image = nil
+            barButtonItem.title = nil
+            infoButton.isHidden = false
         } else {
+            infoButton.isHidden = true
         }
     }
 }
