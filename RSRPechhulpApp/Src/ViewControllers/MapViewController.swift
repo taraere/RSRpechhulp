@@ -17,25 +17,24 @@ class MapViewController : UIViewController, CLLocationManagerDelegate, MKMapView
     private final var PHONE_NUM: String = "+31 900 7788 990"
     
     // Location related variables
-    let manager: CLLocationManager = CLLocationManager()
     let dropPin = MKPointAnnotation()
-    var annotation: Annotation?
+    var annotation: AnnotationLabel?
     var location: CLLocation?
     var didZoom: Bool = false
     
-    //
+    // Connections to views in the xib
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var showCallPopupButton: UIView!
     
+    /**
+     Call when View is loaded:
+     Call popup is insibile
+     Request user authorization to get GPS location
+     Start updating user's location
+     MapView is loaded.
+     */
     override func viewDidLoad() {
-        /*
-         Call when View is loaded:
-                Call popup is insibile
-                Request user authorization to get GPS location
-                Start updating user's location
-                MapView is loaded.
-         */
         super.viewDidLoad()
         
         popUpView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
@@ -43,46 +42,17 @@ class MapViewController : UIViewController, CLLocationManagerDelegate, MKMapView
         popUpView.center = self.view.center
         self.view.addSubview(popUpView)
         
-        manager.requestWhenInUseAuthorization()
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.delegate = self
-        manager.startUpdatingLocation()
+        LocationManager.instance().delegate = self
         
         mapView.delegate = self
     }
     
-    @IBAction func dismissCallPopup(_ sender: AnyObject) {
-        /*
-         Once popup for calling is dismissed, disable its touchability, and animate out.
-         */
-        self.showCallPopupButton.isUserInteractionEnabled = true
-        UIView.animate(withDuration: ANIM_DUR) {
-            self.showCallPopupButton.alpha = 1
-        }
-        
-        popUpView.isUserInteractionEnabled = false
-        UIView.animate(withDuration: ANIM_DUR) {
-            self.popUpView.alpha = 0
-            if let annotation = self.annotation {
-                annotation.alpha = 1
-            }
-            self.popUpView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-        }
-    }
-    
+    /**
+     Make popup visible, and animate it in.
+     */
     @IBAction func showCallPopup(_ sender: AnyObject) {
-        /*
-         Once popup for calling is visible, the annotation, label to the pointer, "Uw locatie", is made invisible.
-         "Bel RSR nu" button is also invisible.
-         Make popup invisible, and animate in.
-         */
         self.showCallPopupButton.isUserInteractionEnabled = false
-        UIView.animate(withDuration: ANIM_DUR) {
-            self.showCallPopupButton.alpha = 0
-            if let annotation = self.annotation {
-                annotation.alpha = 0
-            }
-        }
+        animateButtonAndAnnotation(alpha: 0)
         
         popUpView.isUserInteractionEnabled = true
         UIView.animate(withDuration: ANIM_DUR) {
@@ -91,10 +61,38 @@ class MapViewController : UIViewController, CLLocationManagerDelegate, MKMapView
         }
     }
     
-    @IBAction func callButton(_ sender: AnyObject) {
-        /*
-         Call popup, with cancel option. Will call number on screen.
-         */
+    /**
+     Once popup for calling is visible, the annotation,
+     label to the pointer titled "Uw locatie", is made invisible.
+     "Bel RSR nu" button is also invisible.
+     */
+    func animateButtonAndAnnotation(alpha: CGFloat) {
+        UIView.animate(withDuration: ANIM_DUR) {
+            self.showCallPopupButton.alpha = alpha
+            if let annotation = self.annotation {
+                annotation.alpha = alpha
+            }
+        }
+    }
+    
+    /**
+     Once popup for calling is dismissed, disable its touchability, and animate out.
+     */
+    @IBAction func dismissCallPopup(_ sender: AnyObject) {
+        self.showCallPopupButton.isUserInteractionEnabled = true
+        animateButtonAndAnnotation(alpha: 1)
+        
+        popUpView.isUserInteractionEnabled = false
+        UIView.animate(withDuration: ANIM_DUR) {
+            self.popUpView.alpha = 0
+            self.popUpView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        }
+    }
+    
+    /**
+     Will call number of RSR.
+     */
+    @IBAction func callButton(_ sender: UIButton) {
         let strPhone = "tel:\(self.PHONE_NUM)".replacingOccurrences(of: " ", with: "")
         if let url = URL(string: strPhone), UIApplication.shared.canOpenURL(url) {
             if #available(iOS 10, *) {
@@ -105,32 +103,26 @@ class MapViewController : UIViewController, CLLocationManagerDelegate, MKMapView
         }
     }
     
+    /**
+     Show alert if GPS is not available.
+     */
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        /*
-         Checks for GPS access, returns alert "GPS aanzetten".
-         */
-        print("Error while updating location " + error.localizedDescription)
         
-        let refreshAlert = UIAlertController(title: "GPS aanzetten", message: "U heeft deze app geen toegang gegeven voor GPS. Zet dit a.u.b. aan in uw instellingen", preferredStyle: UIAlertControllerStyle.alert)
-        
-        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        
-        present(refreshAlert, animated: true, completion: nil)
     }
     
+    /**
+     Gets called by LocationManager when location is updated.
+     */
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        /*
-         If called viewDidLoad, update location, or if location is changed, so as to be called a minimal amount of times.
-         */
         if let location = manager.location {
             updateLocation(location)
         }
     }
     
+    /**
+     Use location to update pin, and zoom into the location if it is the first time.
+     */
     func updateLocation(_ location: CLLocation!) {
-        /*
-         Return location, marker/ drop pin, and zoom into the location.
-         */
         self.location = location
         dropPin.coordinate = location.coordinate
         mapView.addAnnotation(dropPin)
@@ -144,15 +136,14 @@ class MapViewController : UIViewController, CLLocationManagerDelegate, MKMapView
         }
     }
     
+    /**
+     Place annotation, the "Uw locatie" label, on the pin.
+     Make content of annotation specific to the user's location.
+     */
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        /*
-         Create mapView screen.
-         Place annotation, the "Uw locatie" label, on mapView.
-         Make content of annotation specific to the user's location.
-         */
-        self.annotation = mapView.dequeueReusableAnnotationView(withIdentifier: "annotation") as? Annotation
+        self.annotation = mapView.dequeueReusableAnnotationView(withIdentifier: "annotation") as? AnnotationLabel
         if self.annotation == nil {
-            self.annotation = Annotation(annotation: annotation, reuseIdentifier: "annotation")
+            self.annotation = AnnotationLabel(annotation: annotation, reuseIdentifier: "annotation")
         }
         
         // Get address from GPS coordinates.

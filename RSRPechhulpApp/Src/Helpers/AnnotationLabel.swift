@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class Annotation: MKPinAnnotationView {
+class AnnotationLabel: MKPinAnnotationView {
     
     let annotationView: AnnotationView = AnnotationView.loadFromNibNamed(nibNamed: "AnnotationView")! as! AnnotationView
     
@@ -27,9 +27,6 @@ class Annotation: MKPinAnnotationView {
     }
     
     func setAddress(address: String) {
-        /*
-         *
-         */
         annotationView.setAddress(address: address)
     }
 }
@@ -42,6 +39,9 @@ class AnnotationView: UIView {
     }
 }
 
+/**
+ Extension on UIView to instantiate a view with a nib.
+ */
 extension UIView {
     class func loadFromNibNamed(nibNamed: String, bundle : Bundle? = nil) -> UIView? {
         return UINib(
