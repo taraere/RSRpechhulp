@@ -12,7 +12,7 @@ class StartViewController: UIViewController {
 
     @IBOutlet weak var infoButton: UIView!
     @IBOutlet weak var barButtonItem: UIBarButtonItem!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

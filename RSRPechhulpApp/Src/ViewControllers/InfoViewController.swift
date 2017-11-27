@@ -12,12 +12,17 @@ class InfoViewController : UIViewController {
     
     @IBOutlet weak var textView: UITextView?
     @IBOutlet weak var imageView: UIImageView?
+    
+    @IBOutlet weak var leftMargin: NSLayoutConstraint?
+    @IBOutlet weak var rightMargin: NSLayoutConstraint?
+    
         
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         if UIDevice.current.userInterfaceIdiom == .pad {
-            // add margins
+            leftMargin?.constant = 50
+            rightMargin?.constant = 50
         } else {
             // hide image
             imageView?.isHidden = true
