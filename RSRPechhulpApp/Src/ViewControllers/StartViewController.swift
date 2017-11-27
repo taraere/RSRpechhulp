@@ -17,7 +17,7 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // TODO: iPad specific stuff
+        // iPad specific views
         if UIDevice.current.userInterfaceIdiom == .pad {
             barButtonItem.image = nil
             barButtonItem.title = nil

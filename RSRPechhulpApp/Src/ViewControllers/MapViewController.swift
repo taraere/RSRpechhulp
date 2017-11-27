@@ -26,16 +26,25 @@ class MapViewController : UIViewController, CLLocationManagerDelegate, MKMapView
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var showCallPopupButton: UIView!
+    @IBOutlet weak var callView: UIView!
     
     /**
      Call when View is loaded:
-     Call popup is insibile
+     Call popup is invisibile
      Request user authorization to get GPS location
      Start updating user's location
      MapView is loaded.
      */
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            // make button invisible and unclickable
+            showCallPopupButton.isHidden = true
+        } else {
+            // button visible, textview hidden
+            callView.isHidden = true
+        }
         
         popUpView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
         popUpView.alpha = 0

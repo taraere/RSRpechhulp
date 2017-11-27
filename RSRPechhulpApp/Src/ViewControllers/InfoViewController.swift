@@ -9,10 +9,18 @@
 import UIKit
 
 class InfoViewController : UIViewController {
+    
+    @IBOutlet weak var textView: UITextView?
+    @IBOutlet weak var imageView: UIImageView?
         
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // TODO: add extra (hidden) image and show it on iPad
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            // add margins
+        } else {
+            // hide image
+            imageView?.isHidden = true
+        }
     }
 }
