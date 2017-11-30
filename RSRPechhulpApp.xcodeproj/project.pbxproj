@@ -89,10 +89,12 @@
 		570D3A591FACE564007624D9 /* RSRPechhulpApp */ = {
 			isa = PBXGroup;
 			children = (
+				570D3A5A1FACE564007624D9 /* AppDelegate.swift */,
+				57125A461FC9771600BE8224 /* ViewControllers */,
+				57125A4A1FC977E000BE8224 /* Helpers */,
 				57125A471FC9772D00BE8224 /* Resources */,
 				57125A491FC977AF00BE8224 /* SupportingFiles */,
 				57125A481FC9775B00BE8224 /* Views */,
-				57125A431FC976AA00BE8224 /* Src */,
 			);
 			path = RSRPechhulpApp;
 			sourceTree = "<group>";
@@ -104,16 +106,6 @@
 				570D3A711FACE565007624D9 /* Info.plist */,
 			);
 			path = RSRPechhulpAppTests;
-			sourceTree = "<group>";
-		};
-		57125A431FC976AA00BE8224 /* Src */ = {
-			isa = PBXGroup;
-			children = (
-				570D3A5A1FACE564007624D9 /* AppDelegate.swift */,
-				57125A461FC9771600BE8224 /* ViewControllers */,
-				57125A4A1FC977E000BE8224 /* Helpers */,
-			);
-			path = Src;
 			sourceTree = "<group>";
 		};
 		57125A461FC9771600BE8224 /* ViewControllers */ = {

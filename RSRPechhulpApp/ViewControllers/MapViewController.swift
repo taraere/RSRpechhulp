@@ -113,13 +113,6 @@ class MapViewController : UIViewController, CLLocationManagerDelegate, MKMapView
     }
     
     /**
-     Show alert if GPS is not available.
-     */
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        
-    }
-    
-    /**
      Gets called by LocationManager when location is updated.
      */
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
