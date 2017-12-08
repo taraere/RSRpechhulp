@@ -12,7 +12,8 @@ class StartViewController: UIViewController {
 
     @IBOutlet weak var infoButton: UIView!
     @IBOutlet weak var barButtonItem: UIBarButtonItem!
-    @IBOutlet weak var topConstraint: NSLayoutConstraint?
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,8 @@ class StartViewController: UIViewController {
             barButtonItem.image = nil
             barButtonItem.title = nil
             infoButton.isHidden = false
-            topConstraint?.constant = 60
+            widthConstraint.constant = -300
+            topConstraint.constant = 60
         } else {
             infoButton.isHidden = true
         }
