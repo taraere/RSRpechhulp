@@ -24,7 +24,7 @@ class StartViewController: UIViewController {
             barButtonItem.image = nil
             barButtonItem.title = nil
             infoButton.isHidden = false
-            widthConstraint.constant = -300
+            widthConstraint.constant = -250
             topConstraint.constant = 60
         } else {
             infoButton.isHidden = true

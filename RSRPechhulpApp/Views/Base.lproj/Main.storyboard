@@ -376,8 +376,8 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="R4N-ux-QbT" firstAttribute="top" secondItem="Ojg-IL-Fkn" secondAttribute="bottom" constant="-200" id="1wM-Om-9ze"/>
+                            <constraint firstItem="Ih3-AH-QCp" firstAttribute="bottom" secondItem="r3b-wZ-cpP" secondAttribute="bottom" constant="45" id="97I-YG-eZW"/>
                             <constraint firstItem="i1o-nU-NOf" firstAttribute="leading" secondItem="Ih3-AH-QCp" secondAttribute="leading" constant="30" id="9Cp-DO-axG"/>
-                            <constraint firstItem="r3b-wZ-cpP" firstAttribute="centerY" secondItem="Ojg-IL-Fkn" secondAttribute="centerY" multiplier="1.79" id="AjG-lO-etD"/>
                             <constraint firstItem="ND1-do-liN" firstAttribute="top" secondItem="Ih3-AH-QCp" secondAttribute="top" id="Dqo-xU-WdG"/>
                             <constraint firstItem="ND1-do-liN" firstAttribute="leading" secondItem="Ih3-AH-QCp" secondAttribute="leading" id="FfS-VQ-b8g"/>
                             <constraint firstItem="R4N-ux-QbT" firstAttribute="leading" secondItem="Ih3-AH-QCp" secondAttribute="leading" id="Jss-5h-atK"/>
