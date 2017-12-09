@@ -118,13 +118,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-Ni-ZcY" userLabel="Buttons View">
-                                <rect key="frame" x="37.5" y="570" width="300" height="120"/>
+                                <rect key="frame" x="37.5" y="563" width="300" height="127"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kl-jn-5qJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="3sf-Gg-tB7"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="53.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
                                         <state key="normal" title="RSR Pechhulp" image="ic_attention" backgroundImage="btn_bel_normal"/>
                                         <state key="selected" backgroundImage="btn_bel_pressed"/>
@@ -134,10 +131,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zO-nR-Xcg">
-                                        <rect key="frame" x="0.0" y="70" width="300" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="SUZ-0C-bbs"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="73.5" width="300" height="53.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="58" maxY="0.0"/>
                                         <state key="normal" title="Over RSR" image="ic_over_normal" backgroundImage="btn_bel_normal"/>
                                         <state key="selected" backgroundImage="btn_bel_pressed"/>
@@ -162,6 +156,8 @@
                         <color key="backgroundColor" red="0.0" green="0.57428932189941406" blue="0.73293060064315796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1kl-jn-5qJ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="1Zj-zJ-ERI"/>
+                            <constraint firstItem="5zO-nR-Xcg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="5Gl-2z-jAK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Etx-hR-6dF" secondAttribute="bottom" id="Epm-cy-Lbi"/>
                             <constraint firstItem="Etx-hR-6dF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UDd-x5-wg3"/>
                             <constraint firstAttribute="bottom" secondItem="v1b-Ni-ZcY" secondAttribute="bottom" constant="-23" id="fOD-ru-WFy"/>
@@ -182,6 +178,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="barButtonItem" destination="ZCX-vH-Ym8" id="Oq1-GQ-U3w"/>
+                        <outlet property="height2Constraint" destination="5Gl-2z-jAK" id="DDM-hS-Dvc"/>
+                        <outlet property="heightConstraint" destination="1Zj-zJ-ERI" id="RhS-40-yYy"/>
                         <outlet property="infoButton" destination="5zO-nR-Xcg" id="bpm-CE-JJr"/>
                         <outlet property="topConstraint" destination="fOD-ru-WFy" id="EIs-ZY-UhO"/>
                         <outlet property="widthConstraint" destination="gqb-Tz-l01" id="Yod-Dk-kqs"/>
@@ -203,10 +201,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3b-wZ-cpP">
-                                <rect key="frame" x="37.5" y="572" width="300" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="0Q1-cJ-Sbq"/>
-                                </constraints>
+                                <rect key="frame" x="37.5" y="565.5" width="300" height="53.5"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
                                 <state key="normal" title="Bel RSR nu" image="ic_phone" backgroundImage="btn_bel_normal"/>
                                 <state key="selected" backgroundImage="btn_bel_pressed"/>
@@ -376,7 +371,7 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="R4N-ux-QbT" firstAttribute="top" secondItem="Ojg-IL-Fkn" secondAttribute="bottom" constant="-200" id="1wM-Om-9ze"/>
-                            <constraint firstItem="Ih3-AH-QCp" firstAttribute="bottom" secondItem="r3b-wZ-cpP" secondAttribute="bottom" constant="45" id="97I-YG-eZW"/>
+                            <constraint firstItem="Ih3-AH-QCp" firstAttribute="bottom" secondItem="r3b-wZ-cpP" secondAttribute="bottom" constant="48" id="97I-YG-eZW"/>
                             <constraint firstItem="i1o-nU-NOf" firstAttribute="leading" secondItem="Ih3-AH-QCp" secondAttribute="leading" constant="30" id="9Cp-DO-axG"/>
                             <constraint firstItem="ND1-do-liN" firstAttribute="top" secondItem="Ih3-AH-QCp" secondAttribute="top" id="Dqo-xU-WdG"/>
                             <constraint firstItem="ND1-do-liN" firstAttribute="leading" secondItem="Ih3-AH-QCp" secondAttribute="leading" id="FfS-VQ-b8g"/>
@@ -389,6 +384,7 @@
                             <constraint firstItem="i1o-nU-NOf" firstAttribute="top" secondItem="Ih3-AH-QCp" secondAttribute="top" constant="150" id="eC1-Ov-kHu"/>
                             <constraint firstItem="r3b-wZ-cpP" firstAttribute="width" secondItem="Ojg-IL-Fkn" secondAttribute="width" multiplier="0.8" id="lom-ye-Taa"/>
                             <constraint firstItem="r3b-wZ-cpP" firstAttribute="centerX" secondItem="Ojg-IL-Fkn" secondAttribute="centerX" id="pgN-kB-ekE"/>
+                            <constraint firstItem="r3b-wZ-cpP" firstAttribute="height" secondItem="Ojg-IL-Fkn" secondAttribute="height" multiplier="0.08" id="te8-0O-S1P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ih3-AH-QCp"/>
                     </view>
